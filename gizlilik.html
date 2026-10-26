@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kıyas — Gizlilik Politikası</title>
+<meta name="description" content="Kıyas Chrome eklentisinin gizlilik politikası. Sunucu yok, veri toplanmıyor.">
+<link rel="icon" href="icon128.png">
+<style>
+  :root{
+    --kagit:#ffffff; --murekkep:#1d1a38; --soluk:#5c5878;
+    --cizgi:#e4e2ef; --mor:#6c63ff; --pembe:#ff6b9d; --kutu:#f7f7fb;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    --kagit:#15132b; --murekkep:#eceaf7; --soluk:#a09cc0;
+    --cizgi:#2b2850; --kutu:#1d1a38;
+  }}
+  :root[data-theme="dark"]{
+    --kagit:#15132b; --murekkep:#eceaf7; --soluk:#a09cc0;
+    --cizgi:#2b2850; --kutu:#1d1a38;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--kagit); color:var(--murekkep);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sayfa{max-width:680px; margin:0 auto; padding:56px 16px 80px}
+  header{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+  header img{width:52px; height:52px; border-radius:12px; display:block}
+  h1{font-size:27px; line-height:1.25; margin:0; letter-spacing:-.4px}
+  .alt{color:var(--soluk); font-size:14px; margin:2px 0 0}
+  .ozet{
+    margin:28px 0 36px; padding:18px 20px; background:var(--kutu);
+    border:1px solid var(--cizgi); border-left:3px solid var(--mor); border-radius:10px;
+  }
+  .ozet p{margin:0; font-size:16px}
+  h2{font-size:18px; margin:38px 0 10px; letter-spacing:-.2px}
+  h2::before{content:""; display:inline-block; width:7px; height:7px; border-radius:50%;
+    background:var(--pembe); margin-right:9px; vertical-align:middle}
+  p{margin:11px 0}
+  ul{margin:11px 0; padding-left:20px}
+  li{margin:5px 0}
+  code{background:var(--kutu); border:1px solid var(--cizgi); border-radius:4px;
+    padding:1px 5px; font-size:13.5px}
+  a{color:var(--mor)}
+  strong{font-weight:650}
+  footer{margin-top:52px; padding-top:20px; border-top:1px solid var(--cizgi);
+    color:var(--soluk); font-size:13.5px}
+  @media (max-width:520px){ .sayfa{padding:36px 16px 60px} h1{font-size:23px} }
+</style>
+</head>
+<body>
+<div class="sayfa">
+
+  <header>
+    <img src="icon128.png" alt="">
+    <div>
+      <h1>Kıyas — Gizlilik Politikası</h1>
+      <p class="alt">Son güncelleme: 26 Ekim 2026</p>
+    </div>
+  </header>
+
+  <div class="ozet">
+    <p><strong>Kısaca:</strong> Kıyas'ın sunucusu yok. CV'lerin de, taradığın ilanlar da
+    senin tarayıcından çıkmıyor. Toplanan hiçbir veri yok, çünkü verinin gideceği bir yer yok.</p>
+  </div>
+
+  <h2>Hangi veriler işleniyor</h2>
+  <p><strong>CV dosyaların.</strong> "CV'lerim" sayfasına bıraktığın PDF'ler tarayıcının
+  içinde okunur, metne çevrilir ve <code>chrome.storage.local</code> içinde saklanır.
+  Dosyanın kendisi hiçbir yere yüklenmez. Eklentiyi kaldırdığında bu veri de silinir.</p>
+
+  <p><strong>Taradığın ilan sayfası.</strong> Yalnızca sen "Bu sayfayı tara" dediğinde,
+  o anda açık olan sekmenin metni okunur. Okunan metin bellekte kalır, kaydedilmez
+  (AI önbelleği hariç — aşağıya bak). Arka planda gezinme geçmişin izlenmez.</p>
+
+  <p><strong>AI ayarların.</strong> API anahtarı girersen bu da aynı yerel depoda tutulur.
+  Tarayıcı deposu şifreli değildir; ortak kullandığın bir bilgisayardaysan bunu hesaba kat.</p>
+
+  <h2>Üçüncü taraflara giden veri</h2>
+  <p>Varsayılan kurulumda <strong>sıfır</strong>. Sözlük tabanlı karşılaştırma tamamen
+  tarayıcıda çalışır.</p>
+  <p>İsteğe bağlı derin analizi açarsan — yani kendi API anahtarını girersen — kırpılmış
+  CV metnin ve ilan metnin <strong>senin seçtiğin sağlayıcıya</strong> gönderilir:
+  Anthropic, OpenAI, Google ya da kendi tanımladığın uç nokta. İstek senin tarayıcından
+  doğrudan oraya gider; aradan geçtiğimiz bir sunucu yok. O verinin orada nasıl işlendiği
+  ilgili sağlayıcının gizlilik politikasına tabidir.</p>
+  <p>Bu özellik kapalıyken hiçbir ağ isteği yapılmaz.</p>
+
+  <h2>Önbellek</h2>
+  <p>Aynı ilan + aynı CV ikinci kez analiz edilmesin diye AI sonucu yerel depoda saklanır.
+  Bu, gereksiz token harcamanı önlemek içindir. Depo yine cihazında; dışarı çıkmaz.</p>
+
+  <h2>Verini silmek</h2>
+  <ul>
+    <li>Tek CV: "CV'lerim" sayfasında kartın köşesindeki × işareti</li>
+    <li>Hepsi: aynı sayfadaki "Hepsini sil" butonu</li>
+    <li>Her şey: eklentiyi Chrome'dan kaldır — depo onunla birlikte gider</li>
+  </ul>
+
+  <h2>Reklam, analitik, izleme</h2>
+  <p>Hiçbiri yok. Analitik SDK'sı, piksel, çerez, kullanım telemetrisi bulunmuyor.</p>
+
+  <h2>İletişim</h2>
+  <p>Soru ya da bildirim için:
+  <a href="mailto:k.erenmaden1@outlook.com">k.erenmaden1@outlook.com</a></p>
+
+  <footer>
+    Kıyas — iş ilanını CV'nle karşılaştıran Chrome eklentisi.
+    Bu sayfa <a href="https://github.com/KursadEren/kiyas">GitHub</a> üzerinde barındırılıyor.
+  </footer>
+
+</div>
+</body>
+</html>
