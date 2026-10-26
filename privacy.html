@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Gap — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Resume Gap Chrome extension. No server, no data collection.">
+<link rel="icon" href="icon128.png">
+<style>
+  :root{
+    --kagit:#ffffff; --murekkep:#1d1a38; --soluk:#5c5878;
+    --cizgi:#e4e2ef; --mor:#6c63ff; --pembe:#ff6b9d; --kutu:#f7f7fb;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    --kagit:#15132b; --murekkep:#eceaf7; --soluk:#a09cc0;
+    --cizgi:#2b2850; --kutu:#1d1a38;
+  }}
+  :root[data-theme="dark"]{
+    --kagit:#15132b; --murekkep:#eceaf7; --soluk:#a09cc0;
+    --cizgi:#2b2850; --kutu:#1d1a38;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--kagit); color:var(--murekkep);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sayfa{max-width:680px; margin:0 auto; padding:56px 16px 80px}
+  header{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+  header img{width:52px; height:52px; border-radius:12px; display:block}
+  h1{font-size:27px; line-height:1.25; margin:0; letter-spacing:-.4px}
+  .alt{color:var(--soluk); font-size:14px; margin:2px 0 0}
+  .ozet{
+    margin:28px 0 36px; padding:18px 20px; background:var(--kutu);
+    border:1px solid var(--cizgi); border-left:3px solid var(--mor); border-radius:10px;
+  }
+  .ozet p{margin:0; font-size:16px}
+  h2{font-size:18px; margin:38px 0 10px; letter-spacing:-.2px}
+  h2::before{content:""; display:inline-block; width:7px; height:7px; border-radius:50%;
+    background:var(--pembe); margin-right:9px; vertical-align:middle}
+  p{margin:11px 0}
+  ul{margin:11px 0; padding-left:20px}
+  li{margin:5px 0}
+  code{background:var(--kutu); border:1px solid var(--cizgi); border-radius:4px;
+    padding:1px 5px; font-size:13.5px}
+  a{color:var(--mor)}
+  strong{font-weight:650}
+  footer{margin-top:52px; padding-top:20px; border-top:1px solid var(--cizgi);
+    color:var(--soluk); font-size:13.5px}
+  @media (max-width:520px){ .sayfa{padding:36px 16px 60px} h1{font-size:23px} }
+</style>
+</head>
+<body>
+<div class="sayfa">
+
+  <header>
+    <img src="icon128.png" alt="">
+    <div>
+      <h1>Resume Gap — Privacy Policy</h1>
+      <p class="alt">Last updated: 26 October 2026</p>
+    </div>
+  </header>
+
+  <div class="ozet">
+    <p><strong>In short:</strong> Resume Gap has no server. Neither your resumes
+    nor the postings you scan ever leave your browser. No data is collected,
+    because there is nowhere for it to go.</p>
+  </div>
+
+  <h2>What data is processed</h2>
+  <p><strong>Your resume files.</strong> PDFs you drop onto the "My resumes" page
+  are read inside your browser, converted to text, and stored in
+  <code>chrome.storage.local</code>. The file itself is never uploaded anywhere.
+  Removing the extension deletes this data with it.</p>
+
+  <p><strong>The posting you scan.</strong> Only when you press "Scan this page"
+  is the text of the currently open tab read. That text stays in memory and is
+  not saved, apart from the AI cache described below. Your browsing is not
+  tracked in the background.</p>
+
+  <p><strong>Your AI settings.</strong> If you enter an API key, it is kept in the
+  same local storage. Browser storage is not encrypted; keep that in mind on a
+  shared computer.</p>
+
+  <h2>Data sent to third parties</h2>
+  <p>In the default configuration, <strong>none</strong>. The dictionary-based
+  comparison runs entirely in your browser.</p>
+  <p>If you enable the optional deep analysis — that is, if you enter your own API
+  key — a trimmed version of your resume text and the posting text is sent to
+  <strong>the provider you selected</strong>: Anthropic, OpenAI, Google, or an
+  endpoint you define yourself. The request goes from your browser directly to
+  them; there is no server of ours in between. How that data is handled on their
+  side is governed by that provider's own privacy policy.</p>
+  <p>While this feature is off, no network request is made at all.</p>
+
+  <h2>Cache</h2>
+  <p>So that the same posting and the same resume are not analysed twice, the AI
+  result is stored locally. This exists to stop you spending tokens you have
+  already spent. The storage is still on your device; it does not leave.</p>
+
+  <h2>Deleting your data</h2>
+  <ul>
+    <li>A single resume: the × on its card on the "My resumes" page</li>
+    <li>All of them: the "Delete all" button on the same page</li>
+    <li>Everything: remove the extension from Chrome — the storage goes with it</li>
+  </ul>
+
+  <h2>Advertising, analytics, tracking</h2>
+  <p>None of it. No analytics SDK, no pixel, no cookie, no usage telemetry.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or reports:
+  <a href="mailto:k.erenmaden1@outlook.com">k.erenmaden1@outlook.com</a></p>
+
+  <footer>
+    Resume Gap — a Chrome extension that compares a job posting to your resume.
+    This page is hosted on <a href="https://github.com/KursadEren/kiyas">GitHub</a>.
+    <br><a href="gizlilik.html">Türkçe</a>
+  </footer>
+
+</div>
+</body>
+</html>
