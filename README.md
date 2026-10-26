@@ -19,7 +19,7 @@
 
 ## Yazılımcı olmana gerek yok
 
-![Muhasebe ilanı](gorsel/kiyas-muhasebe.png)
+![Muhasebe ilanı](gorsel/en-muhasebe.png)
 
 Sabit bir meslek listesi yok. Kıyas ilanın **kendi metninden** ayırt edici
 terimleri çıkarır: muhasebede `mizan`, `e-fatura`, `muhtasar beyanname`;
@@ -51,7 +51,7 @@ Türkçe sondan eklemeli olduğu için ek ayıklayıcı var: liste `plan`ı bili
 
 ## Hangi CV'ni göndermelisin?
 
-![Çoklu CV](gorsel/kiyas-ana.png)
+![Çoklu CV](gorsel/en-ana.png)
 
 Birden fazla CV yükle; hepsini aynı ilana karşı puanlar, en uygununu söyler.
 Üç liste çıkarır:
@@ -68,7 +68,7 @@ kelimeler puanı şişirmesin diye.
 
 ## Emin değilse uydurmaz
 
-![Güvenilirlik eşiği](gorsel/kiyas-guvensiz.png)
+![Güvenilirlik eşiği](gorsel/en-guvensiz.png)
 
 İlanda yeterince ayırt edici terim yoksa yüzde vermeyi **reddeder** ve nedenini
 yazar. Bir terim bulup onu da bilmek "%100 uyum" değildir.
@@ -77,7 +77,7 @@ yazar. Bir terim bulup onu da bilmek "%100 uyum" değildir.
 
 ## İstersen kendi AI'ınla
 
-![AI katmanı](gorsel/kiyas-ai.png)
+![AI katmanı](gorsel/en-ai.png)
 
 Kutudan çıktığı haliyle AI olmadan çalışır. İstersen kendi API anahtarını
 girersin — Anthropic, OpenAI, Gemini ya da kendi uç noktan (Ollama, şirket içi
@@ -102,15 +102,25 @@ Sonrasında herhangi bir ilan sayfasında eklenti simgesine basman yeterli.
 
 ## Diller
 
-Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Felemenkçe,
-Portekizce, Lehçe, Rusça. Bölüm başlıklarını (*Aranan Nitelikler*,
+**İlan dili:** Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca,
+Felemenkçe, Portekizce, Lehçe, Rusça. Bölüm başlıklarını (*Aranan Nitelikler*,
 *Requirements*, *Anforderungen*, *Требования*…) her dilde tanır.
+
+**Arayüz dili:** Türkçe ve İngilizce. Tarayıcı diline göre kendi seçer.
+Yukarıdaki görseller İngilizce arayüzden.
 
 ## Verilerin
 
 Sunucu yok. CV'lerin ve taradığın ilanlar tarayıcından çıkmaz,
 `chrome.storage.local` içinde durur, eklentiyi kaldırınca silinir.
 Reklam, analitik, telemetri yok. → [Gizlilik politikası](https://kursaderen.github.io/kiyas/gizlilik.html)
+
+## Kardeş proje
+
+[Kıyas CV kontrol becerisi](https://github.com/KursadEren/kiyas-skill) aynı işi
+Claude içinde yapar. Eklenti sabit bir sözlük + istatistik kullanır; beceri
+ilanı doğrudan okur, sözlüğe ihtiyaç duymaz. Eklenti ilana *bakarken*,
+beceri CV'ni *düzenlerken* işe yarar.
 
 ## Kaynaklar
 
