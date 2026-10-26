@@ -2,7 +2,7 @@
   <img src="icon128.png" width="84" alt="">
 </p>
 
-<h1 align="center">Kıyas</h1>
+<h1 align="center">Resume Gap</h1>
 
 <p align="center">
   İş ilanını CV'lerinle karşılaştıran Chrome eklentisi.<br>
@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://kursaderen.github.io/kiyas/gizlilik.html">Gizlilik politikası</a> ·
-  <a href="https://github.com/KursadEren/kiyas/releases/latest">İndir</a>
+  <a href="https://kursaderen.github.io/resume-gap-extension/privacy.html">Privacy policy</a> ·
+  <a href="https://github.com/KursadEren/resume-gap-extension/releases/latest">İndir</a>
 </p>
 
 ---
@@ -21,7 +21,7 @@
 
 ![Muhasebe ilanı](gorsel/en-muhasebe.png)
 
-Sabit bir meslek listesi yok. Kıyas ilanın **kendi metninden** ayırt edici
+Sabit bir meslek listesi yok. Resume Gap ilanın **kendi metninden** ayırt edici
 terimleri çıkarır: muhasebede `mizan`, `e-fatura`, `muhtasar beyanname`;
 pazarlamada `Google Ads`, `SEO`, `Salesforce CRM`; hemşirelikte `triyaj`,
 `HBYS`, `İleri Kardiyak Yaşam Desteği`.
@@ -94,7 +94,7 @@ Analiz başına ~3.600 token. Gemini Flash ile tarama başına yaklaşık **$0,0
 
 ## Kurulum
 
-[Son sürümü indir](https://github.com/KursadEren/kiyas/releases/latest), zip'i aç,
+[Son sürümü indir](https://github.com/KursadEren/resume-gap-extension/releases/latest), zip'i aç,
 `chrome://extensions` → *Geliştirici modu* → *Paketlenmemiş öğe yükle*.
 
 İlk açılışta **CV'lerim** sayfasına PDF'lerini sürükle bırak. Bir kere.
@@ -113,11 +113,11 @@ Yukarıdaki görseller İngilizce arayüzden.
 
 Sunucu yok. CV'lerin ve taradığın ilanlar tarayıcından çıkmaz,
 `chrome.storage.local` içinde durur, eklentiyi kaldırınca silinir.
-Reklam, analitik, telemetri yok. → [Gizlilik politikası](https://kursaderen.github.io/kiyas/gizlilik.html)
+Reklam, analitik, telemetri yok. → [Gizlilik politikası](https://kursaderen.github.io/resume-gap-extension/privacy.html)
 
 ## Kardeş proje
 
-[Kıyas CV kontrol becerisi](https://github.com/KursadEren/kiyas-skill) aynı işi
+[Kıyas CV kontrol becerisi](https://github.com/KursadEren/resume-gap-extension-skill) aynı işi
 Claude içinde yapar. Eklenti sabit bir sözlük + istatistik kullanır; beceri
 ilanı doğrudan okur, sözlüğe ihtiyaç duymaz. Eklenti ilana *bakarken*,
 beceri CV'ni *düzenlerken* işe yarar.
